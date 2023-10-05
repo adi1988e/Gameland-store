@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import logo from "../assets/logo_200x200.png";
+import logo3 from "../assets/logo3.png";
 
 function Logo() {
   return (
     <StyledLogo>
-      <Img src={logo} alt="Logo" />
+      <Img src={logo3} alt="Logo" />
     </StyledLogo>
   );
 }
@@ -14,7 +14,7 @@ const StyledLogo = styled.div`
 `;
 
 const Img = styled.img`
-  height: 5.6rem;
+  height: 5.4rem;
   width: auto;
 `;
 

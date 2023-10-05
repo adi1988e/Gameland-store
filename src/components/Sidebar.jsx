@@ -6,6 +6,7 @@ import styled from "styled-components";
 import CartButtons from "./CartButtons";
 import { useSelector, useDispatch } from "react-redux";
 import { closeSidebar } from "../features/productsSlice";
+import logo3 from "../assets/logo3.png";
 
 const Sidebar = () => {
   const { isSidebarOpen } = useSelector((store) => store.products);
@@ -17,7 +18,7 @@ const Sidebar = () => {
         className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
       >
         <div className="sidebar-header">
-          <img src={logo} className="logo" alt="coding addict" />
+          <img src={logo3} className="logo" alt="coding addict" />
           <button
             className="close-btn"
             onClick={() => {
