@@ -34,11 +34,7 @@ const CartButtons = () => {
         </button>
       ) : (
         <button type="button" className="auth-btn">
-          <Link
-            to="/login"
-            className="cart-btn"
-            //  onClick={closeSideBar}
-          >
+          <Link to="/login" className="cart-btn" onClick={closeSideBar}>
             Login <FaUserPlus />
           </Link>
         </button>

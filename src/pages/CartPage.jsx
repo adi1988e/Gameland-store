@@ -15,9 +15,9 @@ const CartPage = () => {
     dispatch(getCartItems(cartId));
   }, [totalQuantity, dispatch, cartId]);
 
-  // if (isLoading) {
-  //   return <Loading />;
-  // }
+  if (isLoading) {
+    return <Loading />;
+  }
 
   if (totalQuantity < 1) {
     return (
