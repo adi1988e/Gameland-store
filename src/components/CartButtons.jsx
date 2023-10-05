@@ -14,13 +14,14 @@ const CartButtons = () => {
 
   return (
     <Wrapper className="cart-btn-wrapper">
-      <Link to="/cart" className="cart-btn" onClick={closeSideBar}>
-        Cart
+      <Button type="button" className="cart-btn">
+        <Link to="/cart" onClick={closeSideBar}>
+          Cart <FaShoppingCart />
+        </Link>
         <span className="cart-container">
-          <FaShoppingCart />
           <span className="cart-value">{totalQuantity}</span>
         </span>
-      </Link>
+      </Button>
 
       {isAuthenticated ? (
         <button
@@ -69,7 +70,7 @@ const Wrapper = styled.div`
   }
   .cart-value {
     position: absolute;
-    top: -10px;
+    top: -25px;
     right: -16px;
     background: var(--clr-primary-5);
     width: 16px;
@@ -95,5 +96,15 @@ const Wrapper = styled.div`
       margin-left: 5px;
     }
   }
+`;
+
+const Button = styled.button`
+  display: flex;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: var(--clr-grey-1);
+
+  border: none;
+  background: transparent;
 `;
 export default CartButtons;

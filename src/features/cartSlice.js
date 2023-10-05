@@ -120,11 +120,11 @@ const cartSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getCartItems.fulfilled, (state, { payload }) => {
-        state.isLoading = false;
         state.items = payload.products;
         state.cartId = payload._id;
         state.totalQuantity = payload.totalQuantity;
         state.totalAmount = payload.totalAmount;
+        state.isLoading = false;
       })
       .addCase(getCartItems.rejected, (state) => {
         state.isLoading = false;
