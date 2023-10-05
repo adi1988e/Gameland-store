@@ -8,11 +8,8 @@ const getUserFromLocalStorage = () => {
 
 const initialState = {
   isLoading: false,
-  // isSidebarOpen: false,
   user: getUserFromLocalStorage(),
   isAuthenticated: false,
-  // sendNewRequest: false,
-  // roles: "",
 };
 
 export const registerUser = createAsyncThunk(

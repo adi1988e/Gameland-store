@@ -131,7 +131,6 @@ const filtersSlice = createSlice({
           category: "all",
           color: "all",
           price: state.filters.max_price,
-          shipping: false,
         },
       };
     },

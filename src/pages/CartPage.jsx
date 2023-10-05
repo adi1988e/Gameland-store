@@ -13,7 +13,8 @@ const CartPage = () => {
 
   useEffect(() => {
     dispatch(getCartItems(cartId));
-  }, [totalQuantity, dispatch, cartId]);
+    // eslint-disable-next-line
+  }, [totalQuantity, cartId]);
 
   if (isLoading) {
     return <Loading />;

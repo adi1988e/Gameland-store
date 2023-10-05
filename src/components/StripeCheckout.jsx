@@ -37,7 +37,7 @@ const CheckoutForm = () => {
       );
       setClientSecret(data.clientSecret);
     } catch (error) {
-      console.log(error.response);
+      throw new Error("Something went wrong");
     }
   };
   useEffect(() => {

@@ -8,7 +8,6 @@ import {
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "./features/productsSlice";
-import { getCartItems } from "./features/cartSlice";
 import {
   Home,
   SingleProduct,
@@ -43,7 +42,6 @@ function CustomerLayout() {
 function App() {
   const [cookies] = useCookies(["token"]);
   const dispatch = useDispatch();
-  const cartId = localStorage.getItem("cartId");
   const { product_loading: loading, product_error: error } = useSelector(
     (store) => store.products
   );
@@ -96,10 +94,6 @@ function App() {
       dispatch(authUser(cookies.token));
     }
   }, [cookies, dispatch]);
-
-  useEffect(() => {
-    dispatch(getCartItems(cartId));
-  }, [dispatch, cartId]);
 
   useEffect(() => {
     dispatch(getProducts());
