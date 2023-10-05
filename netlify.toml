@@ -1,3 +1,8 @@
+
+[Settings]
+ID = "9901acc7-1508-465f-be50-ea59b0868a80"
+
 [build]
 functions = "./functions"
 base = "dist"
+  publish = "Gameland project/dist/"
