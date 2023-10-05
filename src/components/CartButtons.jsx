@@ -15,7 +15,10 @@ const CartButtons = () => {
   return (
     <Wrapper className="cart-btn-wrapper">
       <Button type="button" className="cart-btn">
-        <Link to="/cart" onClick={closeSideBar}>
+        <Link
+          to="/cart"
+          //  onClick={closeSideBar}
+        >
           Cart <FaShoppingCart />
         </Link>
         <span className="cart-container">
@@ -35,7 +38,11 @@ const CartButtons = () => {
         </button>
       ) : (
         <button type="button" className="auth-btn">
-          <Link to="/login" className="cart-btn" onClick={closeSideBar}>
+          <Link
+            to="/login"
+            className="cart-btn"
+            //  onClick={closeSideBar}
+          >
             Login <FaUserPlus />
           </Link>
         </button>
